@@ -105,3 +105,6 @@ venv.bak/
 
 Tests.ipynb
 test_data.csv
+test.py
+Test/
+.idea/

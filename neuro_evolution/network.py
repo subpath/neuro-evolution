@@ -1,4 +1,8 @@
+import os
+import sys
+sys.path.append(os.path.dirname(os.path.realpath(__file__)))
 import random
+
 from train import train_and_score
 
 
@@ -6,6 +10,7 @@ class Network:
 
     def __init__(self, nn_param_choice):
         self.nn_param_choices = nn_param_choice
+        self.accuracy = 0
         self.network = {}
 
     def create_random(self):

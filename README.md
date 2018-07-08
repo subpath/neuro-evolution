@@ -1,7 +1,9 @@
 # neuro-evolution
-Wrapper for neural evolution for hyperparameter tuning
-
-Code based on [Matt Harvey]('https://github.com/harvitronix') repo: https://github.com/harvitronix/neural-network-genetic-algorithm
+[Neuro-evelution]('https://en.wikipedia.org/wiki/Neuroevolution') for Neural Network hyper parameter tuning
 
 
-# Repository is under developing, please wait for better readme
+This repository is wrapper for the code provided by [Matt Harvey]('https://github.com/harvitronix')
+repository: https://github.com/harvitronix/neural-network-genetic-algorithm
+
+
+

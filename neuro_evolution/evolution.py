@@ -1,5 +1,11 @@
-from optimizer import Optimizer
+import os
+import sys
+
+sys.path.append(os.path.dirname(os.path.realpath(__file__)))
 from tqdm import tqdm
+from logger import logger
+
+from optimizer import Optimizer
 
 
 class NeuroEvolution:
@@ -32,9 +38,9 @@ class NeuroEvolution:
             self._train_networks(x_train, y_train, x_test, y_test)
             self._networks = optimizer.evolve(self._networks)
 
-        # self._networks = sorted(self._networks, key=lambda x: x.accuracy, reverse=True)
-        # self.best_params = self._networks[0]
-
+        self._networks = sorted(self._networks, key=lambda x: x.accuracy, reverse=True)
+        self.best_params = self._networks[0]
+        logger.info("best accuracy: {}, best params: {}".format(self.best_params.accuracy, self.best_params.network))
 
     def _train_networks(self, x_train, y_train, x_test, y_test):
         """
