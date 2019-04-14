@@ -11,7 +11,7 @@ Example of usage:
 
 1. Create dictionary with parameters
 ```python
-from evolution import NeuroEvolution
+from neuro_evolution import evolution
 
 params = {
     "epochs": [10, 20, 35],
@@ -31,7 +31,7 @@ params = {
 ```python
 # x_train, y_train, x_test, y_test - prepared data
 
-search = NeuroEvolution(generations = 10, population = 10, params=params)
+search = evolution.NeuroEvolution(generations = 10, population = 10, params=params)
 
 search.evolve(x_train, y_train, x_test, y_test)
 
